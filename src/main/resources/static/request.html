@@ -1,0 +1,117 @@
+<section id="request" ng-controller="RequestCtrl as requestCtrl" data-ng-init="requestCtrl.getAllPersons()">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-uppercase section-heading">How do we help</h2><span>
+                <em>Du bist schon einmal von einer Reise gekommen und dachtest dir: “Mist, wieso habe ich das nicht mitgenommen, das bekomme ich doch hier nirgendwo!”?
+Auch deine Freunde und Verwandte besuchen dieses Land in näherer Zukunft nicht und selbst Amazon und co. können nicht mehr weiterhelfen?
+Dann bist du bei uns genau richtig!
+Bei uns kannst du dein Gesuch aufgeben und jemand, der sich aktuell im ausgewählten Land befindet oder zukünftig dorthin reist, kann dir deinen Wunschartikel ganz einfach mitbringen!
+</em></span>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="container">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th style="width: 45%">Mitbringer</th>
+                    <th style="width: 45%">Mitbringsel</th>
+                    <th style="width: 45%">Reiseland</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="x in requestCtrl.beitraege">
+                    <td>{{ x.mitbringerId }}</td>
+                    <td>{{ x.produktName }}</td>
+                    <td>{{ x.landName }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+<!-------------------------------------------------------->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Beitrag erstellen
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Beitrag erstellen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form ng-submit="requestCtrl.newBeitrag()">
+                        <div class="form-group">
+                            <label >Reiseland</label>
+                            <input class="form-control" type="text" id="landName" placeholder="Reiseland">
+                        </div>
+                        <div class="form-group">
+                            <label>Mitbringsel</label>
+                            <input class="form-control" type="text" id="produktName" placeholder="Mitbringsel">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------------->
+
+    <div class="container">
+        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+                <th>Reiseland</th>
+                <th>Von</th>
+                <th>Nach</th>
+                <th>Wer</th>
+                <th>Wann</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Schokolade</td>
+                <td>Luzern</td>
+                <td>Ravensburg</td>
+                <td>Wanderlust1996</td>
+                <td>10/10/2016</td>
+
+            </tr>
+            <tr>
+                <td>Schokolade</td>
+                <td>Luzern</td>
+                <td>Ravensburg</td>
+                <td>Wanderlust1996</td>
+                <td>10/10/2016</td>
+
+            </tr>
+            <tr>
+                <td>Schokolade</td>
+                <td>Luzern</td>
+                <td>Ravensburg</td>
+                <td>Wanderlust1996</td>
+                <td>10/10/2016</td>
+
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</section>
