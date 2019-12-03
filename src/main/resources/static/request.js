@@ -22,6 +22,6 @@ app.controller("RequestCtrl", function ($http) {
             produktName: produktName
         };
         $http.post("/newBeitrag", newBeitrag)
+        location.reload();
     };
-
 });
