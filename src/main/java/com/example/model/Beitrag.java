@@ -12,6 +12,8 @@ public class Beitrag {
     private int id;
     private String landName;
     private String produktName;
+    private String beschreibung;
+    private  String kontakt;
     private long mitbringerId;
 
     public int getId() {
@@ -38,6 +40,27 @@ public class Beitrag {
         this.produktName = produktName;
     }
 
+
+    public String getBeschreibung() {
+        return beschreibung;
+    }
+
+    public void setBeschreibung(String beschreibung) {
+        this.beschreibung = beschreibung;
+    }
+
+    public String getKontakt() {
+        return kontakt;
+    }
+
+    public void setKontakt(String kontakt) {
+        this.kontakt = kontakt;
+    }
+
+
+
+
+
  public long getMitbringerId() {
         return mitbringerId;
     }
@@ -53,5 +76,7 @@ public class Beitrag {
         this.landName = landName;
         this.produktName = produktName;
         this.mitbringerId = mitbringerId;
+        this.beschreibung = beschreibung;
+        this.kontakt = kontakt;
  }
 }

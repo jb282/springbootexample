@@ -16,9 +16,11 @@ Bei uns kannst du dein Gesuch aufgeben und jemand, der sich aktuell im ausgewäh
             <table class="table">
                 <thead>
                 <tr>
-                    <th style="width: 45%">Mitbringer</th>
-                    <th style="width: 45%">Mitbringsel</th>
-                    <th style="width: 45%">Reiseland</th>
+                    <th scope="col">Mitbringer</th>
+                    <th scope="col">Mitbringsel</th>
+                    <th scope="col">Reiseland</th>
+                    <th scope="col">Beschreibung</th>
+                    <th scope="col">Kontakt</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -26,6 +28,8 @@ Bei uns kannst du dein Gesuch aufgeben und jemand, der sich aktuell im ausgewäh
                     <td>{{ x.mitbringerId }}</td>
                     <td>{{ x.produktName }}</td>
                     <td>{{ x.landName }}</td>
+                    <td>{{ x.beschreibung }}</td>
+                    <td>{{ x.kontakt }}</td>
                 </tr>
                 </tbody>
             </table>
@@ -58,6 +62,14 @@ Bei uns kannst du dein Gesuch aufgeben und jemand, der sich aktuell im ausgewäh
                         <div class="form-group">
                             <label>Mitbringsel</label>
                             <input class="form-control" type="text" id="produktName" placeholder="Mitbringsel">
+                        </div>
+                        <div class="form-group">
+                            <label>Beschreibung</label>
+                            <input class="form-control" type="text" id="beschreibung" placeholder="Beschreibung">
+                        </div>
+                        <div class="form-group">
+                            <label>Kontakt</label>
+                            <input class="form-control" type="text" id="kontakt" placeholder="Kontakt">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Erstellen</button>

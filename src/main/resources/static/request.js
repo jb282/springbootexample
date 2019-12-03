@@ -16,10 +16,14 @@ app.controller("RequestCtrl", function ($http) {
     controller.newBeitrag = function () {
         var landName = $('#landName').val();
         var produktName = $('#produktName').val();
+        var beschreibung = $('#beschreibung').val();
+        var kontakt = $('#kontakt').val();
 
         var newBeitrag = {
             landName: landName,
-            produktName: produktName
+            produktName: produktName,
+            beschreibung: beschreibung,
+            kontakt: kontakt
         };
         $http.post("/newBeitrag", newBeitrag)
         location.reload();
