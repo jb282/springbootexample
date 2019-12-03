@@ -38,7 +38,7 @@ public class Beitrag {
         this.produktName = produktName;
     }
 
-    public long getMitbringerId() {
+ public long getMitbringerId() {
         return mitbringerId;
     }
 
@@ -53,5 +53,5 @@ public class Beitrag {
         this.landName = landName;
         this.produktName = produktName;
         this.mitbringerId = mitbringerId;
-    }
+ }
 }
