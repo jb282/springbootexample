@@ -34,6 +34,7 @@ public class UserController {
                 user.setPassword(passwordEncoder.encode(newUser.getPassword()));
                 user.setRole(Role.ADMIN);
                 user.setEnabled(true);
+                user.setEmail(newUser.getEmail());
                 userRepo.save(user);
             } else {
                 return ResponseEntity.badRequest().body(1);
