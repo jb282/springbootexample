@@ -42,6 +42,13 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    private String email="";
+
+    @Size(max = 30000)
+    private String description="";
+    @Size(max = 30000)
+    private String pic="";
+
     @Builder
     public User(Long id, String username, String password, boolean enabled, Role role) {
         this.id = id;
@@ -89,6 +96,30 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public String getPic() {
+        return pic;
+    }
+
+    public void setPic(String pic) {
+        this.pic = pic;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public User(@Size(min = 5, max = 25) String username, @Size(min = 5, max = 60) String password, @NotNull boolean enabled, @NotNull Role role) {

@@ -1,0 +1,15 @@
+<section id="profil" ng-controller="ProfilCtrl as profilCtrl" data-ng-init="profilCtrl.getUser()">
+
+
+
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src={{profilCtrl.user.pic}} alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{profilCtrl.user.username}}</h5>
+                            <small class="card-text">{{profilCtrl.user.email}}</small>
+                            <p class="card-text">{{profilCtrl.user.description}}</p>
+                            <a class="btn btn-primary" href="mailto:{{profilCtrl.user.email}}">Send mail</a>
+                        </div>
+                    </div>
+
+</section>

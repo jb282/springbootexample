@@ -59,7 +59,11 @@ public class UserController {
         userRepo.deleteById(id);
         return ResponseEntity.ok().body(null);
     }
-
+    @RequestMapping(method = RequestMethod.GET, value = "/getUser/{id}")
+    private ResponseEntity getUser(@PathVariable long id) {
+        Optional<User> user= userRepo.findById(id);
+        return ResponseEntity.ok().body(user);
+    }
     @RequestMapping(method = RequestMethod.PUT, value = "/changeStatus/{id}")
     private ResponseEntity changeStatus(@PathVariable long id) {
 

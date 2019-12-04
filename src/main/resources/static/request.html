@@ -13,26 +13,19 @@ Bei uns kannst du dein Gesuch aufgeben und jemand, der sich aktuell im ausgewäh
     </div>
     <div class="col">
         <div class="container">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">Mitbringer</th>
-                    <th scope="col">Mitbringsel</th>
-                    <th scope="col">Reiseland</th>
-                    <th scope="col">Beschreibung</th>
-                    <th scope="col">Kontakt</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="x in requestCtrl.beitraege">
-                    <td>{{ x.mitbringerId }}</td>
-                    <td>{{ x.produktName }}</td>
-                    <td>{{ x.landName }}</td>
-                    <td>{{ x.beschreibung }}</td>
-                    <td>{{ x.kontakt }}</td>
-                </tr>
-                </tbody>
-            </table>
+            <div class="card-columns">
+                <div class="card" ng-repeat="x in requestCtrl.beitraege">
+                    <div style="text-align: center;"><img src="{{ x.pic }}" alt="Card image cap" width="150" height="200"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ x.produktName }}</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a type="button" class="btn btn-primary" ng-href="/#!/profil?id={{ x.mitbringerId }}">
+                            Profil
+                        </a>
+                        <p class="card-text"><small class="text-muted">{{ x.landName }}</small></p>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -68,8 +61,8 @@ Bei uns kannst du dein Gesuch aufgeben und jemand, der sich aktuell im ausgewäh
                             <input class="form-control" type="text" id="beschreibung" placeholder="Beschreibung">
                         </div>
                         <div class="form-group">
-                            <label>Kontakt</label>
-                            <input class="form-control" type="text" id="kontakt" placeholder="Kontakt">
+                            <label>Bild</label>
+                            <input class="form-control" type="text" id="pic" placeholder="Bild">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Erstellen</button>

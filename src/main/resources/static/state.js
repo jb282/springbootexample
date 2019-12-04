@@ -13,4 +13,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: "/request",
             templateUrl: "request.html"
         })
+        .state('profil', {
+            url: "/profil",
+            templateUrl: "profil.html"
+        })
 });
