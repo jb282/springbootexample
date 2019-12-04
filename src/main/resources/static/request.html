@@ -12,6 +12,21 @@ Bei uns kannst du dein Gesuch aufgeben und jemand, der sich aktuell im ausgewäh
         </div>
     </div>
     <div class="col">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 ml-auto">
+                    <!-------------------------------------------------------->
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="float: right;">
+                        neues Gesuch
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col">
         <div class="container">
             <div class="card-columns">
                 <div class="card" ng-repeat="x in requestCtrl.beitraege">
@@ -29,11 +44,7 @@ Bei uns kannst du dein Gesuch aufgeben und jemand, der sich aktuell im ausgewäh
         </div>
 
     </div>
-<!-------------------------------------------------------->
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        neues Gesuch
-    </button>
+
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

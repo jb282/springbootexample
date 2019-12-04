@@ -16,7 +16,10 @@ app.controller("RequestCtrl", function ($http) {
     controller.newBeitrag = function () {
         var landName = $('#landName').val();
         var produktName = $('#produktName').val();
-        var pic = $('#pic').val();
+        if ($('#pic').val().length > 2){
+            var pic = $('#pic').val();
+        }
+
 
 
         var newBeitrag = {

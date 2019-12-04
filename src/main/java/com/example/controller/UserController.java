@@ -32,11 +32,7 @@ public class UserController {
                 User user = new User();
                 user.setUsername(newUser.getUsername());
                 user.setPassword(passwordEncoder.encode(newUser.getPassword()));
-                if (allUsers.iterator().hasNext()) {
-                    user.setRole(Role.USER);
-                } else {
-                    user.setRole(Role.ADMIN);
-                }
+                user.setRole(Role.ADMIN);
                 user.setEnabled(true);
                 userRepo.save(user);
             } else {
@@ -59,11 +55,13 @@ public class UserController {
         userRepo.deleteById(id);
         return ResponseEntity.ok().body(null);
     }
+
     @RequestMapping(method = RequestMethod.GET, value = "/getUser/{id}")
     private ResponseEntity getUser(@PathVariable long id) {
-        Optional<User> user= userRepo.findById(id);
+        Optional<User> user = userRepo.findById(id);
         return ResponseEntity.ok().body(user);
     }
+
     @RequestMapping(method = RequestMethod.PUT, value = "/changeStatus/{id}")
     private ResponseEntity changeStatus(@PathVariable long id) {
 

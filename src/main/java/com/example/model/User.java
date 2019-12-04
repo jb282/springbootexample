@@ -47,7 +47,7 @@ public class User {
     @Size(max = 30000)
     private String description="";
     @Size(max = 30000)
-    private String pic="";
+    private String pic="https://cdn2.iconfinder.com/data/icons/user-interface-blue/64/User_Interface_Filled_Outline-01-512.png";
 
     @Builder
     public User(Long id, String username, String password, boolean enabled, Role role) {
