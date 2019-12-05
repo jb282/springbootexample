@@ -17,8 +17,5 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: "/profil",
             templateUrl: "profil.html"
         })
-        .state('profil2', {
-            url: "/profil2",
-            templateUrl: "profil2.html"
-        })
+
 });
