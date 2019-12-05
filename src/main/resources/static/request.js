@@ -16,6 +16,7 @@ app.controller("RequestCtrl", function ($http) {
     controller.newBeitrag = function () {
         var landName = $('#landName').val();
         var produktName = $('#produktName').val();
+        var beschreibung = $('#beschreibung').val();
         if ($('#pic').val().length > 2){
             var pic = $('#pic').val();
         }
@@ -25,6 +26,7 @@ app.controller("RequestCtrl", function ($http) {
         var newBeitrag = {
             landName: landName,
             produktName: produktName,
+            beschreibung: beschreibung,
             pic: pic
         };
         $http.post("/newBeitrag", newBeitrag)
