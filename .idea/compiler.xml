@@ -9,7 +9,6 @@
         <module name="springboot-example" />
         <module name="Example" />
         <module name="Spring-Boot-Example" />
-        <module name="springbootexample" />
       </profile>
     </annotationProcessing>
   </component>
