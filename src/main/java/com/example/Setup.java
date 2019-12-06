@@ -29,9 +29,10 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 
         admin.setUsername("Balola");
         admin.setPassword(new BCryptPasswordEncoder().encode("admin"));
-        admin.setEmail("balola@web.de");
+        admin.setEmail("mitbringsel.balola@web.de");
         admin.setPic("https://images.unsplash.com/photo-1497316730643-415fac54a2af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
-        admin.setDescription("Hallo zusammen! Wir leiten die Seite und haben selbst auch Interesse an exotischen Mitbringseln aus verschiedenen Ländern.");
+        admin.setDescription("Hallo zusammen! Wir leiten die Seite und haben selbst auch Interesse an exotischen Mitbringseln aus verschiedenen Ländern." +
+                "Wenn ihr Fragen oder Vorschläge habt, könnt ihr uns gerne eine Mail schicken.");
         repo.save(admin);
 
         //Users 2
@@ -75,8 +76,8 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
         repo.save(kirchberg);
 
         //Beitraege
-        Beitrag b1 = new Beitrag("Schweiz", "Schokolade","Caramel & Salz Schokolade von Swiss Organic." ,1);
-        b1.setPic("https://swiss-made.shop/media/shop/thumbnails/300x450f/maestrani-schweizer-schokolade-caramel-salz-swiss-made.jpg");
+        Beitrag b1 = new Beitrag("", "Fragen oder Vorschläge?","Wir sind die Administratoren der Seite. Bei Fragen oder Vorschlägen, könnt ihr euch gerne an uns wenden." ,1);
+        b1.setPic("http://njsbizsolutions.com/wp-content/uploads/2015/10/Admin-Support-NJs.png");
         beitragRepository.save(b1);
         //Beitraege 2
         Beitrag b2 = new Beitrag("USA", "Cheetos", "Ich hätte gerne Cheetos in der Geschmacksrichtung Flamin' Hot Chrunchy und würde mich freuen, wenn mir die jemand mirbringen würde!", kirchberg.getId().intValue());
@@ -112,6 +113,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
         Beitrag b8 = new Beitrag("Japan", "Kinder-Kimono", "Ich hätte gerne für meine Tochter einen japanischen Kimono als Kostüm. Ich würde mich sehr freuen, wenn sich jemand auf mein Gesuch meldet!", kirchberg.getId().intValue());
         b8.setPic("https://images-na.ssl-images-amazon.com/images/I/6170kX9o9SL._UY606_.jpg");
         beitragRepository.save(b8);
+
 
 
 

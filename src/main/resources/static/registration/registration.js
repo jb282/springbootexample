@@ -14,11 +14,15 @@ app.controller("RegistrationCtrl", function ($http) {
         var password = $('#password').val();
         var password2 = $('#password2').val();
         var email = $('#email').val();
+        var beschreibung = $('#beschreibung').val();
+        var pic = $('#pic').val();
         var newUser = {
             username: username,
             password: password,
             password2: password2,
-            email: email
+            email: email,
+            beschreibung: beschreibung,
+            pic: pic
         };
         $http.post("/newUser", newUser).then(function () {
             window.location.assign("/login/login.html")

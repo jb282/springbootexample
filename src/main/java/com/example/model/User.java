@@ -45,7 +45,7 @@ public class User {
     private String email="";
 
     @Size(max = 30000)
-    private String description="";
+    private String beschreibung="";
     @Size(max = 30000)
     private String pic="https://cdn2.iconfinder.com/data/icons/user-interface-blue/64/User_Interface_Filled_Outline-01-512.png";
 
@@ -114,12 +114,12 @@ public class User {
         this.email = email;
     }
 
-    public String getDescription() {
-        return description;
+    public String getBeschreibung() {
+        return beschreibung;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescription(String beschreibung) {
+        this.beschreibung = beschreibung;
     }
 
     public User(@Size(min = 5, max = 25) String username, @Size(min = 5, max = 60) String password, @NotNull boolean enabled, @NotNull Role role) {
@@ -127,6 +127,9 @@ public class User {
         this.password = password;
         this.enabled = enabled;
         this.role = role;
+        this.pic = pic;
+        this.beschreibung = beschreibung;
+        this.email = email;
     }
 
     public User() {

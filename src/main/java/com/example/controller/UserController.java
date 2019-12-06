@@ -35,6 +35,9 @@ public class UserController {
                 user.setRole(Role.ADMIN);
                 user.setEnabled(true);
                 user.setEmail(newUser.getEmail());
+                user.setDescription(newUser.getBeschreibung());
+                if (newUser.getPic().length() > 2)
+                    user.setPic(newUser.getPic());
                 userRepo.save(user);
             } else {
                 return ResponseEntity.badRequest().body(1);

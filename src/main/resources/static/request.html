@@ -11,33 +11,38 @@ Bei uns kannst du dein Gesuch aufgeben und jemand, der sich aktuell im ausgewäh
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 ml-auto">
-                    <!-------------------------------------------------------->
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="float: right;">
-                        neues Gesuch
-                    </button>
-                </div>
-            </div>
 
+    <div class="row" style="
+    margin-bottom: 20px;
+    margin-top: 50px;
+">
+        <div class="col-sm-12">
+            <div class="text-center">
+                <!-------------------------------------------------------->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
+                    neues Gesuch
+                </button>
+            </div>
         </div>
     </div>
+
 
     <div class="col">
         <div class="container">
             <div class="card-columns">
                 <div class="card" ng-repeat="x in requestCtrl.beitraege">
-                    <div style="text-align: center;"><img src="{{ x.pic }}" alt="Card image cap" width="150" height="200"></div>
+                    <div style="text-align: center;"><img src="{{ x.pic }}" alt="Card image cap" width="150"
+                                                          height="200"></div>
                     <div class="card-body">
                         <h5 class="card-title">{{ x.produktName }}</h5>
                         <p class="card-text">{{ x.beschreibung }}</p>
                         <a type="button" class="btn btn-primary" ng-href="/#!/profil?id={{ x.mitbringerId }}">
                             Profil
                         </a>
-                        <p class="card-text"><medium class="text-muted">{{ x.landName }}</medium></p>
+                        <p class="card-text">
+                            <medium class="text-muted">{{ x.landName }}</medium>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -46,10 +51,9 @@ Bei uns kannst du dein Gesuch aufgeben und jemand, der sich aktuell im ausgewäh
     </div>
 
 
-
-
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -62,7 +66,7 @@ Bei uns kannst du dein Gesuch aufgeben und jemand, der sich aktuell im ausgewäh
 
                     <form ng-submit="requestCtrl.newBeitrag()">
                         <div class="form-group">
-                            <label >Reiseland</label>
+                            <label>Reiseland</label>
                             <input class="form-control" type="text" id="landName" placeholder="Reiseland">
                         </div>
                         <div class="form-group">

@@ -11,4 +11,6 @@ public class UserToDo {
     private String password;
     private String password2;
     private String email;
+    private String beschreibung;
+    private String pic;
 }
