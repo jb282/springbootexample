@@ -15,7 +15,6 @@ public class Beitrag {
     private String produktName;
 
     private String beschreibung;
-
     private long mitbringerId;
     @Size(max = 30000)
     private String pic = "https://www.maria-woerth.info/wp-content/uploads/2016/05/kein-bild.png";
